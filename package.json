@@ -14,13 +14,12 @@
     "test": "node node_modules/gulp/bin/gulp build && node node_modules/mocha/bin/mocha build/test/test.js"
   },
   "keywords": [
-    "decorative-endpoints",
-    "decorative-endpoint",
+    "decorative-service",
+    "decorative-services",
     "decorative",
     "decorator",
-    "endpoints",
-    "endpoint",
-    "api"
+    "services",
+    "service"
   ],
   "author": "Cytren",
   "license": "MIT",
