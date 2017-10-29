@@ -1,0 +1,43 @@
+{
+  "name": "@decorative/services",
+  "version": "1.0.0",
+  "description": "Decorative services for TypeScript",
+  "private": true,
+  "main": "build/main/index.js",
+  "types": "build/main/index.d.ts",
+  "scripts": {
+    "watch": "node node_modules/gulp/bin/gulp watch",
+    "clean": "node node_modules/gulp/bin/gulp clean",
+    "build": "node node_modules/gulp/bin/gulp build",
+    "package": "node node_modules/gulp/bin/gulp package",
+    "lint": "node node_modules/tslint/bin/tslint src/main/**/*.ts",
+    "test": "node node_modules/gulp/bin/gulp build && node node_modules/mocha/bin/mocha build/test/test.js"
+  },
+  "keywords": [
+    "decorative-endpoints",
+    "decorative-endpoint",
+    "decorative",
+    "decorator",
+    "endpoints",
+    "endpoint",
+    "api"
+  ],
+  "author": "Cytren",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-typescript": "^3.2.1",
+    "mocha": "^3.4.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.1"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.10"
+  }
+}
