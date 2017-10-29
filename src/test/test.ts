@@ -21,7 +21,7 @@ describe("Non-injected class", () => {
 describe("Injected class", () => {
     @Inject
     class SimpleClass {
-        @Service(SimpleService)
+        @Service
         public simpleService: SimpleService;
     }
 
