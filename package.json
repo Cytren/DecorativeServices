@@ -1,6 +1,6 @@
 {
   "name": "@decorative/services",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Decorative services for TypeScript",
   "private": true,
   "main": "build/main/index.js",
