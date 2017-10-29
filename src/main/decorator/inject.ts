@@ -1,5 +1,5 @@
 
-import {getService} from "../service/service-manager";
+import {getService} from "../service/injector";
 
 export function Inject (target, property) {
     const type = Reflect.getMetadata("design:type", target, property);
