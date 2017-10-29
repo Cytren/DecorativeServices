@@ -1,6 +1,6 @@
 
 import {assert} from "chai";
-import {Inject, Service} from "../main/index";
+import {Injectable, Inject} from "../main/index";
 
 class SimpleService {
     public name = "Service Name";
@@ -19,9 +19,9 @@ describe("Non-injected class", () => {
 });
 
 describe("Injected class", () => {
-    @Inject
+    @Injectable
     class SimpleClass {
-        @Service
+        @Inject
         public simpleService: SimpleService;
     }
 

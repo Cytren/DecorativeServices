@@ -1,13 +1,16 @@
 
-export function Inject <T extends Function> (target: T): T | void {
-    if (!target.prototype.__injections__) { return; }
+import {getService} from "../service/service-manager";
 
-    const constructor = function () {
-        target.prototype.__injections__.forEach(item => this[item.property] = item.service);
-    };
+export function Inject (target, property) {
+    const type = Reflect.getMetadata("design:type", target, property);
 
-    constructor.prototype = Object.create(target.prototype);
-    constructor.prototype.constructor = target;
+    if (!target.constructor.prototype.__injections__) {
+        target.constructor.prototype.__injections__ = [];
+    }
 
-    return constructor as any;
+    target.constructor.prototype.__injections__.push({
+        name: type.name,
+        property,
+        service: getService(type as FunctionConstructor),
+    });
 }
